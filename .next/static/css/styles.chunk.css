@@ -1,18 +1,114 @@
-.header {
-  width: 100vw; }
+/* COLORS */
+/* SPACING */
+/* FONTS */
+.layout .main .main-left, .layout .main .main-right {
+  width: 100%; }
 
-* {
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; }
+  .layout .header {
+    background-color: #eeebdf;
+    padding: 16px;
+    border-top: 5px solid #D33F49; }
+  .layout .main {
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    @media (max-width: 1200px) {
+      .layout .main {
+        flex-direction: column; } }
+    .layout .main .main-left {
+      width: 600px;
+      padding: 0 16px; }
+    .layout .main .main-right {
+      position: sticky;
+      width: 400px;
+      padding: 0 16px; }
+
+.info {
+  border-left: 1px solid #D33F49;
+  padding: 0 16px; }
+
+.container {
+  overflow: none;
+  width: 600px; }
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60px;
+  padding: 8px; }
+  .icon i {
+    text-align: center; }
+  .icon img {
+    padding: 8px;
+    height: 20px;
+    width: auto;
+    text-align: center; }
+  .icon .icon-text {
+    text-transform: uppercase;
+    font-family: Nanum Gothic;
+    font-size: 12px;
+    font-weight: 900;
+    text-align: center;
+    color: #D33F49; }
+
+.navigation-main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: space-between; }
+  .navigation-main .indicator-space {
+    display: flex;
+    position: relative;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px; }
+  .navigation-main .indicator {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: #D33F49;
+    border-radius: 100%; }
+
+h1 {
+  font-family: Varela Round;
+  margin: 8px 0px; }
+
+h2 {
+  font-family: Varela Round;
+  color: #262730; }
+
+h3 {
+  font-family: Dosis;
+  color: #77BA99; }
+
+p {
+  font-family: Nanum Gothic;
+  white-space: pre-wrap;
+  text-align: justify; }
+
+i {
+  padding: 8px;
+  font-size: 20px; }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
-
-.header {
-  background-color: beige;
-  border-top: 5px solid maroon;
-  height: 200px; }
-
-.main {
-  background-color: orange; }
+  box-sizing: border-box;
+  background-color: #eeebdf;
+  color: #262730;
+  overflow-y: scroll; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

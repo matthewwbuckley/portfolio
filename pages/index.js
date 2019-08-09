@@ -1,18 +1,55 @@
 import React from 'react'
-import '../styles/styles.scss'
-import Link from 'next/link'
-import Header from '../layout/header'
-import Main from '../layout/main'
+import Icon from '../components/Icon'
 
-function Home() {
-  return (
-    <div>
-      <Header />
-      <Main>
-        Hi <Link href='/items'><div>About Us</div></Link>
-      </Main>
-    </div>
-  )
+class Home extends React.Component {
+  render() {
+    return (
+      <div className='container'>
+        <h3>Hi! Welcome to my site.</h3>
+        <p>
+          I am a self taught web developer with a PhD in Chemistry. I am comfortable with foundational web based technologies.
+        </p>
+        <div className='flex-row'>
+          <Icon icon={<i class="devicon-html5-plain" />} text={'html5'} />
+          <Icon icon={<i class="devicon-css3-plain" />} text={'CSS3'} />
+          <Icon icon={<i class="devicon-javascript-plain" />} text={'JS/ES6'} />
+        </div>
+
+          
+          
+          
+        <p>
+          I am growing in confidence with the MERN Stack. I have more experience with front-end development but have developed full stack applications.
+        </p>
+        <div className='flex-row'>
+          <Icon icon={<i class="devicon-react-original"/>} text={'react'} />
+          <Icon icon={<i class="devicon-express-original" />} text={'express'} />
+          <Icon icon={<i class="devicon-mongodb-plain" />} text={'mongodb'} />
+          <Icon icon={<i class="devicon-nodejs-plain" />} text={'nodejs'} />
+        </div>
+        <p>
+          I have some experience with the following connected technologies:
+        </p>
+        <div className='flex-row'>
+          <Icon icon={<i class="devicon-sass-original" />} text={'sass'} />
+          <Icon icon={<img src='static/next-js.svg' alt='next' />} text={'next'} />
+          <Icon icon={<img src='static/gatsby.svg' alt='next' />} text={'gatsby'} />
+          <Icon icon={<img src='static/strapi.svg' alt='next' />} text={'strapi'} />
+          <Icon icon={<i class="devicon-git-plain" />} text={'git'} />
+        </div>
+        <p>
+          During my PhD I investigated Ionic Liquid/small molecule interactions under Ultra-High Vacuum conditions. I looked at water, acetone and sulfur dioxide desorption when interacting with ILs to characterise their interactions. The work helped develop a deliberate and methodical approach to problems, and working as a team helped develop my communications skills. Towards the end of my PhD I found that I really enjoyed develping tools to analyse my data, and decided to pursue programming.
+        </p>
+        <p>
+          I am quiet, patient, and happily boring. I have an interest in games, science, politics, and technology. Before getting into web development I had a go at game development and developed a game for android, a discussion of which can be seen in my projects. 
+        </p>
+      </div>
+    )
+  }
 }
 
-export default Home;
+const text = `
+ 
+`
+
+export default Home

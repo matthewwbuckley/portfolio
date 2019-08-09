@@ -1,3 +1,40 @@
 %full-width {
   width: 100vw;
 }
+
+%responsive-submain {
+  width: 100%;
+}
+
+.layout{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  .header{
+    background-color: $color-light;
+    padding: $spacing-default;
+    border-top: 5px solid $color-highlight;    
+  }
+  .main{
+    padding: $spacing-large;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    @media (max-width: 1200px){
+      flex-direction: column;
+    }
+    .main-left{
+      @extend %responsive-submain;
+      width: 600px;
+      padding: 0 $spacing-default;
+    }
+    .main-right{
+      @extend %responsive-submain;
+      position: sticky;
+      width: 400px;
+      padding: 0 $spacing-default;
+    }
+  }
+}

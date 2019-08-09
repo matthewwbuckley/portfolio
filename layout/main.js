@@ -1,36 +1,13 @@
 import React from 'react'
-import { Transition } from 'react-transition-group'
-
-const duration = 3000
-
-const defaultStyle = {
-  transition: `opacity ${duration}ms ease-in-out`,
-  opacity: 0,
-}
-
-const transitionStyles = {
-  entering: { opacity: 1 },
-  entered:  { opacity: 1 },
-  exiting:  { opacity: 0 },
-  exited:  { opacity: 0 },
-};
-
+import MainLeft from './MainLeft'
+import MainRight from './MainRight'
 
 function Main(props) {
   return (
-    <Transition in appear timeout={duration}>
-    {state => (
-      <div style={{
-        ...defaultStyle,
-        ...transitionStyles[state]
-      }}>
-        <div class="main">
-          {props.children}
-        </div>
-      </div>
-    )}
-  </Transition>
-    
+    <div className="main">
+      <MainLeft  app={props.app} {...props.left} />
+      <MainRight app={props.app} {...props.right} />      
+    </div>
   )
 }
 

@@ -1,0 +1,25 @@
+h1 {
+  font-family: $font-title;
+  margin: $spacing-small 0px;
+}
+
+h2 {
+  font-family: $font-title;
+  color: $color-dark;
+}
+
+h3 {
+  font-family: $font-default;
+  color: $color-semidark;
+}
+
+p {
+  font-family: $font-subtitle;
+  white-space: pre-wrap;
+  text-align: justify;
+}
+
+i {
+  padding: $spacing-small;
+  font-size: 20px;
+}
