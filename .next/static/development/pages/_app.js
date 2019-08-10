@@ -29,7 +29,14 @@ class Info extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
         lineNumber: 7
       },
       __self: this
-    }, "Matthew Buckley"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      class: "no-display-breakpoint-first",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, "Matthew Buckley")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 8
@@ -344,7 +351,7 @@ const transitionStyles = {
   end: {
     opacity: 1,
     color: null,
-    filter: 'blur(0)',
+    filter: 'blur(0px)',
     delay: transitionDuration,
     ease: gsap__WEBPACK_IMPORTED_MODULE_3__["SlowMo"].easeInOut
   }
@@ -364,7 +371,7 @@ const navEnter = component => {
       cleanEnd = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_transitionStyles$end, ["delay"]);
 
   gsap__WEBPACK_IMPORTED_MODULE_3__["TweenLite"].set(component, cleanStart);
-  gsap__WEBPACK_IMPORTED_MODULE_3__["TweenLite"].to(component, transitionDuration * 1.5, cleanEnd);
+  gsap__WEBPACK_IMPORTED_MODULE_3__["TweenLite"].to(component, 1.6, cleanEnd);
 };
 
 const enter = component => {

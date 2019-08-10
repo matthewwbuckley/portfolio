@@ -38,7 +38,7 @@ class Home extends React.Component {
           <Icon icon={<i class="devicon-git-plain" />} text={'git'} />
         </div>
         <p>
-          During my PhD I investigated Ionic Liquid/small molecule interactions under Ultra-High Vacuum conditions. I looked at water, acetone and sulfur dioxide desorption when interacting with ILs to characterise their interactions. The work helped develop a deliberate and methodical approach to problems, and working as a team helped develop my communications skills. Towards the end of my PhD I found that I really enjoyed develping tools to analyse my data, and decided to pursue programming.
+          My PhD now comes under "transferable skills", so let me discuss it briefly. I investigated small molecule desorption from Ionic Liquids to characterise their interactions  while under Ultra-High Vacuum conditions. The work helped develop a deliberate and methodical approach to problems, and working as a team helped develop my communications skills. Towards the end of my PhD I found that I really enjoyed develping tools to analyse my data, and decided to pursue programming.
         </p>
         <p>
           I am quiet, patient, and happily boring. I have an interest in games, science, politics, and technology. Before getting into web development I had a go at game development and developed a game for android, a discussion of which can be seen in my projects. 
@@ -47,9 +47,5 @@ class Home extends React.Component {
     )
   }
 }
-
-const text = `
- 
-`
 
 export default Home

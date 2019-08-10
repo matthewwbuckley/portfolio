@@ -3,3 +3,9 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.no-display-breakpoint-first {
+  @media (max-width: $breakpoint-first) {
+    display: none;
+  }
+}

@@ -2,6 +2,11 @@
 .info {
   border-left: 1px solid $color-highlight;
   padding: 0 $spacing-default;
+  @media (max-width: $breakpoint-first){
+    border-left: none;
+    border-bottom: 1px solid $color-highlight;
+    text-align: center;
+  }
 }
 
 %indicator-space {
@@ -11,6 +16,11 @@
 .container {
   overflow: none;
   width: 600px;
+  @media (max-width: $breakpoint-second){
+    width: -webkit-calc(100% - #{$spacing-default*2});
+    width:    -moz-calc(100% - #{$spacing-default});
+    width:         calc(100% - #{$spacing-default});
+  }
 }
 
 .icon {

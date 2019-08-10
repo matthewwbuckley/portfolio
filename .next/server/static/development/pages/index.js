@@ -388,7 +388,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
         lineNumber: 40
       },
       __self: this
-    }, "During my PhD I investigated Ionic Liquid/small molecule interactions under Ultra-High Vacuum conditions. I looked at water, acetone and sulfur dioxide desorption when interacting with ILs to characterise their interactions. The work helped develop a deliberate and methodical approach to problems, and working as a team helped develop my communications skills. Towards the end of my PhD I found that I really enjoyed develping tools to analyse my data, and decided to pursue programming."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, "My PhD now comes under \"transferable skills\", so let me discuss it briefly. I investigated small molecule desorption from Ionic Liquids to characterise their interactions  while under Ultra-High Vacuum conditions. The work helped develop a deliberate and methodical approach to problems, and working as a team helped develop my communications skills. Towards the end of my PhD I found that I really enjoyed develping tools to analyse my data, and decided to pursue programming."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 43
@@ -399,9 +399,6 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
 }
 
-const text = `
- 
-`;
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),

@@ -17,7 +17,7 @@ const transitionStyles = {
   end:  { 
     opacity: 1,
     color: null,
-    filter: 'blur(0)',
+    filter: 'blur(0px)',
     delay: transitionDuration,
     ease:  SlowMo.easeInOut,
   },
@@ -27,7 +27,7 @@ const navEnter = (component) => {
   let { position, ...cleanStart } = transitionStyles.start
   let { delay, ...cleanEnd } = transitionStyles.end
   TweenLite.set(component, cleanStart)
-  TweenLite.to(component, transitionDuration*1.5, cleanEnd)
+  TweenLite.to(component, 1.6, cleanEnd)
 }
 
 const enter = (component) => {

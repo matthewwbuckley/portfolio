@@ -14,3 +14,10 @@ body {
   overflow-y: scroll;
 }
 
+::selection {
+  background: $color-semidark; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $color-semidark; /* Gecko Browsers */
+}
+

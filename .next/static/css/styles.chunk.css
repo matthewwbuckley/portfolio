@@ -1,6 +1,7 @@
 /* COLORS */
 /* SPACING */
 /* FONTS */
+/* BREAKPOINTS */
 .layout .main .main-left, .layout .main .main-right {
   width: 100%; }
 
@@ -12,6 +13,9 @@
     background-color: #eeebdf;
     padding: 16px;
     border-top: 5px solid #D33F49; }
+    @media (max-width: 1200px) {
+      .layout .header {
+        text-align: center; } }
   .layout .main {
     padding: 24px;
     display: flex;
@@ -19,22 +23,42 @@
     justify-content: center; }
     @media (max-width: 1200px) {
       .layout .main {
-        flex-direction: column; } }
+        flex-direction: column-reverse;
+        align-items: center; } }
     .layout .main .main-left {
       width: 600px;
       padding: 0 16px; }
+      @media (max-width: 650px) {
+        .layout .main .main-left {
+          width: 100%; } }
     .layout .main .main-right {
       position: sticky;
       width: 400px;
       padding: 0 16px; }
+      @media (max-width: 1200px) {
+        .layout .main .main-right {
+          width: 600px; } }
+      @media (max-width: 650px) {
+        .layout .main .main-right {
+          width: 100%; } }
 
 .info {
   border-left: 1px solid #D33F49;
   padding: 0 16px; }
+  @media (max-width: 1200px) {
+    .info {
+      border-left: none;
+      border-bottom: 1px solid #D33F49;
+      text-align: center; } }
 
 .container {
   overflow: none;
   width: 600px; }
+  @media (max-width: 650px) {
+    .container {
+      width: -webkit-calc(100% - 32px);
+      width: -moz-calc(100% - 16px);
+      width: calc(100% - 16px); } }
 
 .icon {
   display: flex;
@@ -102,6 +126,10 @@ i {
   flex-direction: row;
   flex-wrap: wrap; }
 
+@media (max-width: 1200px) {
+  .no-display-breakpoint-first {
+    display: none; } }
+
 body {
   padding: 0;
   margin: 0;
@@ -109,6 +137,14 @@ body {
   background-color: #eeebdf;
   color: #262730;
   overflow-y: scroll; }
+
+::selection {
+  background: #77BA99;
+  /* WebKit/Blink Browsers */ }
+
+::-moz-selection {
+  background: #77BA99;
+  /* Gecko Browsers */ }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

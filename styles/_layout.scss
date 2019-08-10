@@ -14,7 +14,10 @@
   .header{
     background-color: $color-light;
     padding: $spacing-default;
-    border-top: 5px solid $color-highlight;    
+    border-top: 5px solid $color-highlight;  
+    @media (max-width: $breakpoint-first){
+      text-align: center;
+    }  
   }
   .main{
     padding: $spacing-large;
@@ -22,19 +25,30 @@
     flex-direction: row;
     justify-content: center;
 
-    @media (max-width: 1200px){
-      flex-direction: column;
+    @media (max-width: $breakpoint-first){
+      flex-direction: column-reverse;
+      align-items: center;
     }
+
     .main-left{
       @extend %responsive-submain;
       width: 600px;
       padding: 0 $spacing-default;
+      @media (max-width: $breakpoint-second){
+        width: 100%;
+      }
     }
     .main-right{
       @extend %responsive-submain;
       position: sticky;
       width: 400px;
       padding: 0 $spacing-default;
+      @media (max-width: $breakpoint-first){
+        width: 600px;
+      }
+      @media (max-width: $breakpoint-second){
+        width: 100%;
+      }
     }
   }
 }
