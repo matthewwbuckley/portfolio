@@ -15,7 +15,7 @@ class Projects extends React.Component {
           technologies={[ technologies.unreal ]}
         />
         <ProjectLink 
-          link="/"
+          link="/projects"
           name="interactive Short Story Site"
           text="My largest project to date is a site for creating short interactive stories and has ~300 sign-ups. This will take you to an article discussing the challenges and lessons of the project, a more in depth look at the technologies used, and comments on why I think the site will ultimately fail."
           technologies={[ technologies.react, technologies.mongo, technologies.express, technologies.node, technologies.strapi ]}
@@ -27,7 +27,7 @@ class Projects extends React.Component {
           technologies={[ technologies.react, technologies.mongo, technologies.express, technologies.node ]}
         />
         <ProjectLink 
-          link="/"
+          link="/projects"
           name="This Portfolio"
           text="The site was used to explore a number of fun libraries. This short article will give a brief rundown of the site."
           technologies={[ technologies.react, technologies.node, technologies.next, technologies.sass ]}
