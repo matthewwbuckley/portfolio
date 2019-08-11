@@ -327,12 +327,14 @@ function Main(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/esm/index.js");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var _components_NavigationMain__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/NavigationMain */ "./components/NavigationMain.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/esm/index.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var _components_NavigationMain__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/NavigationMain */ "./components/NavigationMain.js");
+
 
 var _jsxFileName = "D:\\Websites\\portfolio\\layout\\MainLeft.js";
 
@@ -343,17 +345,16 @@ const transitionDuration = 0.6;
 const transitionStyles = {
   start: {
     opacity: 0,
-    color: '#77BA99',
     filter: 'blur(1px)',
     position: 'absolute',
-    ease: gsap__WEBPACK_IMPORTED_MODULE_3__["SlowMo"].easeInOut
+    ease: gsap__WEBPACK_IMPORTED_MODULE_4__["SlowMo"].easeInOut
   },
   end: {
     opacity: 1,
-    color: null,
     filter: 'blur(0px)',
+    position: 'static',
     delay: transitionDuration,
-    ease: gsap__WEBPACK_IMPORTED_MODULE_3__["SlowMo"].easeInOut
+    ease: gsap__WEBPACK_IMPORTED_MODULE_4__["SlowMo"].easeInOut
   }
 };
 
@@ -362,46 +363,53 @@ const navEnter = component => {
       {
     position
   } = _transitionStyles$sta,
-      cleanStart = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_transitionStyles$sta, ["position"]);
+      cleanStart = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_transitionStyles$sta, ["position"]);
 
   let _transitionStyles$end = transitionStyles.end,
       {
     delay
   } = _transitionStyles$end,
-      cleanEnd = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_transitionStyles$end, ["delay"]);
+      cleanEnd = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_transitionStyles$end, ["delay"]);
 
-  gsap__WEBPACK_IMPORTED_MODULE_3__["TweenLite"].set(component, cleanStart);
-  gsap__WEBPACK_IMPORTED_MODULE_3__["TweenLite"].to(component, 1.6, cleanEnd);
+  gsap__WEBPACK_IMPORTED_MODULE_4__["TweenLite"].set(component, cleanStart);
+  gsap__WEBPACK_IMPORTED_MODULE_4__["TweenLite"].to(component, 1.6, cleanEnd);
 };
 
 const enter = component => {
-  gsap__WEBPACK_IMPORTED_MODULE_3__["TweenLite"].set(component, transitionStyles.start);
-  gsap__WEBPACK_IMPORTED_MODULE_3__["TweenLite"].to(component, transitionDuration, transitionStyles.end);
+  gsap__WEBPACK_IMPORTED_MODULE_4__["TweenLite"].set(component, transitionStyles.start);
+  gsap__WEBPACK_IMPORTED_MODULE_4__["TweenLite"].to(component, transitionDuration, transitionStyles.end);
 };
 
 const exit = component => {
-  gsap__WEBPACK_IMPORTED_MODULE_3__["TweenLite"].set(component, transitionStyles.end);
-  gsap__WEBPACK_IMPORTED_MODULE_3__["TweenLite"].to(component, transitionDuration, transitionStyles.start);
+  gsap__WEBPACK_IMPORTED_MODULE_4__["TweenLite"].set(component, Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, transitionStyles.end, {
+    delay: 0,
+    position: 'absolute',
+    top: 0
+  }));
+  gsap__WEBPACK_IMPORTED_MODULE_4__["TweenLite"].to(component, transitionDuration / 2, {
+    color: '#77BA99'
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_4__["TweenLite"].to(component, transitionDuration, transitionStyles.start);
 };
 
-class MainLeft extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+class MainLeft extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
   render() {
     const {
       component,
       app
     } = this.props;
-    const componentWithProps = react__WEBPACK_IMPORTED_MODULE_1___default.a.cloneElement(component, {
+    const componentWithProps = react__WEBPACK_IMPORTED_MODULE_2___default.a.cloneElement(component, {
       app
     });
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
       className: "main-left",
       ref: this.ref,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 53
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["Transition"], {
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_3__["Transition"], {
       in: true,
       appear: !this.props.app.state.hasMounted,
       timeout: 0,
@@ -410,23 +418,23 @@ class MainLeft extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 57
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_NavigationMain__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_NavigationMain__WEBPACK_IMPORTED_MODULE_5__["default"], {
       app: app,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 60
       },
       __self: this
-    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["TransitionGroup"], {
+    })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_3__["TransitionGroup"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 62
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["Transition"], {
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_3__["Transition"], {
       appear: true,
       timeout: {
         enter: transitionDuration * 1000,
@@ -492,12 +500,6 @@ const enter = component => {
 };
 
 class MainRight extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  // componentWillMount(){
-  //   this.ref = React.createRef()
-  // }
-  // componentDidMount(){
-  //   this.props.app.setReference('mainRight', this.ref)
-  // }
   render() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_1__["Transition"], {
       in: true,
@@ -508,7 +510,7 @@ class MainRight extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 30
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -516,7 +518,7 @@ class MainRight extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       ref: this.ref,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 33
       },
       __self: this
     }, this.props.component));
@@ -677,6 +679,36 @@ module.exports = _asyncToGenerator;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js":
 /*!********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js ***!
@@ -706,6 +738,49 @@ function _extends() {
   };
 
   return _extends.apply(this, arguments);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _objectSpread; });
+/* harmony import */ var _core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/get-own-property-descriptor */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js");
+/* harmony import */ var _core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/object/get-own-property-symbols */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js");
+/* harmony import */ var _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _core_js_object_keys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _core_js_object_keys__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_keys__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+
+
+
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    var ownKeys = _core_js_object_keys__WEBPACK_IMPORTED_MODULE_2___default()(source);
+
+    if (typeof _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default.a === 'function') {
+      ownKeys = ownKeys.concat(_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default()(source).filter(function (sym) {
+        return _core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0___default()(source, sym).enumerable;
+      }));
+    }
+
+    ownKeys.forEach(function (key) {
+      Object(_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(target, key, source[key]);
+    });
+  }
+
+  return target;
 }
 
 /***/ }),

@@ -1,8 +1,11 @@
 
 .info {
+  position: sticky;
+  top: $spacing-large;
   border-left: 1px solid $color-highlight;
   padding: 0 $spacing-default;
   @media (max-width: $breakpoint-first){
+    position: static;
     border-left: none;
     border-bottom: 1px solid $color-highlight;
     text-align: center;
@@ -14,6 +17,8 @@
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   overflow: none;
   width: 600px;
   @media (max-width: $breakpoint-second){
@@ -21,6 +26,11 @@
     width:    -moz-calc(100% - #{$spacing-default});
     width:         calc(100% - #{$spacing-default});
   }
+}
+
+.project-link-inner {
+  padding:  $spacing-default 0px;
+  cursor: pointer;
 }
 
 .icon {
@@ -57,6 +67,10 @@
   flex-direction: row;
   justify-content: space-between;
 
+  h2 {
+    cursor: pointer;
+  }
+
   .indicator-space {
     display: flex;
     position: relative;
@@ -74,6 +88,36 @@
     background-color: $color-highlight;
     border-radius: 100%;
   }
-  
-  
+
+}
+
+
+.navigation-projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-sub-selected {
+    color: $color-highlight
+  }
+}
+
+.list-item {
+  display: flex;
+  align-content: center;
+}
+
+.bullet-container {
+  display: flex;
+  align-items: center;
+  padding: $spacing-small;
+  padding-right: $spacing-default;
+
+  .bullet {
+    height: 8px;
+    width: 8px;
+    background-color: $color-semidark;
+    border-radius: 100%;
+  }
 }

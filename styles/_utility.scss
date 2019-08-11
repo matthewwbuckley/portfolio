@@ -4,8 +4,56 @@
   flex-wrap: wrap;
 }
 
+.start {
+  align-self: flex-start
+}
+
+.end {
+  align-self: flex-end
+}
+
+.video-main {
+  height: 337px
+}
+
+.spacer {
+  padding: $spacing-large;
+}
+
+.interactive {
+  cursor: pointer;
+}
+
 .no-display-breakpoint-first {
   @media (max-width: $breakpoint-first) {
     display: none;
   }
+}
+
+.interaction-indicator-width {
+  width: 0%;
+  height: 2px;
+  background-color: $color-highlight
+}
+
+.interaction-indicator-height {
+  height: 100%;
+  width: 2px;
+  background-color: $color-highlight
+}
+
+.reveal-height {
+  height: 0%;
+  overflow: hidden
+}
+
+.indicator-static {
+  opacity: 0;
+  transform: scale(0);
+  align-self: center;
+  margin: $spacing-small;
+  height: 12px;
+  width: 12px;
+  background-color: $color-highlight;
+  border-radius: 100%;
 }

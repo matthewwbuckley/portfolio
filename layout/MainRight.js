@@ -24,13 +24,6 @@ const enter = (component) => {
 }
 
 class MainRight extends React.Component {
-  // componentWillMount(){
-  //   this.ref = React.createRef()
-  // }
-  
-  // componentDidMount(){
-  //   this.props.app.setReference('mainRight', this.ref)
-  // }
 
   render(){
     return (

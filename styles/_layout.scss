@@ -21,6 +21,7 @@
   }
   .main{
     padding: $spacing-large;
+    padding-bottom: $spacing-largest;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -40,7 +41,6 @@
     }
     .main-right{
       @extend %responsive-submain;
-      position: sticky;
       width: 400px;
       padding: 0 $spacing-default;
       @media (max-width: $breakpoint-first){

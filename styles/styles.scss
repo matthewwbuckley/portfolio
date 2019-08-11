@@ -12,6 +12,8 @@ body {
   background-color: $color-light;
   color: $color-dark;
   overflow-y: scroll;
+  min-height: calc(100vh + 5px);
+  border-bottom: 5px solid $color-semidark
 }
 
 ::selection {
@@ -19,5 +21,9 @@ body {
 }
 ::-moz-selection {
   background: $color-semidark; /* Gecko Browsers */
+}
+
+iframe {
+  margin: $spacing-large 0;
 }
 

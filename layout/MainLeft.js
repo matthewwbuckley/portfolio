@@ -9,15 +9,15 @@ const transitionDuration = 0.6
 const transitionStyles = {
   start:  { 
     opacity: 0,
-    color: '#77BA99',
+    
     filter: 'blur(1px)',
     position: 'absolute',
     ease:  SlowMo.easeInOut,
   },
   end:  { 
     opacity: 1,
-    color: null,
     filter: 'blur(0px)',
+    position: 'static',
     delay: transitionDuration,
     ease:  SlowMo.easeInOut,
   },
@@ -36,7 +36,8 @@ const enter = (component) => {
 }
 
 const exit = (component) => {
-  TweenLite.set(component, transitionStyles.end)
+  TweenLite.set(component, {...transitionStyles.end, delay: 0, position: 'absolute', top: 0})
+  TweenLite.to(component, transitionDuration/2, {color: '#77BA99'})
   TweenLite.to(component, transitionDuration, transitionStyles.start)
 }
 
@@ -58,24 +59,22 @@ class MainLeft extends React.Component {
           >
             <NavigationMain app={app} />
         </Transition>
-        
-        <TransitionGroup>
-          <Transition
-            appear
-            timeout={{ enter: transitionDuration*1000, exit: transitionDuration*1000 }}
-            key={this.props.app.props.router.route}
-            onEnter={(component)=>{enter(component)}}
-            onExit={(component)=>{exit(component)}}
-          > 
-            
+          <TransitionGroup>
+            <Transition
+              appear
+              timeout={{ enter: transitionDuration*1000, exit: transitionDuration*1000 }}
+              key={this.props.app.props.router.route}
+              onEnter={(component)=>{enter(component)}}
+              onExit={(component)=>{exit(component)}}
+            > 
               {componentWithProps}
-            
-          </Transition>
-        </TransitionGroup>
+            </Transition>
+          </TransitionGroup>
+        
+        
       </div>
     )
   }
 };
 
 export default MainLeft
-
