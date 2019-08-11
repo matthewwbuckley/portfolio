@@ -165,25 +165,27 @@ class Info extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-transition-group */ "react-transition-group");
-/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_transition_group__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap */ "gsap");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(gsap__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-transition-group */ "react-transition-group");
+/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_transition_group__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap */ "gsap");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(gsap__WEBPACK_IMPORTED_MODULE_4__);
+
 var _jsxFileName = "D:\\Websites\\portfolio\\components\\NavigationMain.js";
 
 
 
 
 
-class NavigationMain extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+class NavigationMain extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props) {
     super(props);
-    this.indicatorSpaceRef = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
-    this.indicatorRef = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    this.indicatorSpaceRef = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
+    this.indicatorRef = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
   }
 
   componentDidMount() {
@@ -195,62 +197,74 @@ class NavigationMain extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Compon
   moveIndicator(bool, duration = 1.2) {
     const dimensions = this.indicatorSpaceRef.current.getBoundingClientRect();
     const move = bool ? `${dimensions.width - 20}` : '10px';
-    gsap__WEBPACK_IMPORTED_MODULE_3__["TweenLite"].to(this.indicatorRef.current, duration, {
-      left: move,
-      ease: gsap__WEBPACK_IMPORTED_MODULE_3__["Power2"].easeOut
+    let borders = {};
+    borders.borderTopLeftRadius = bool ? '100%' : '0%';
+    borders.borderTopRightRadius = bool ? '100%' : '100%';
+    borders.borderBottomLeftRadius = bool ? '100%' : '100%';
+    borders.borderBottomRightRadius = bool ? '0%' : '100%';
+    gsap__WEBPACK_IMPORTED_MODULE_4__["TweenLite"].set(this.indicatorRef.current, {
+      borderRadius: '100%'
     });
+    gsap__WEBPACK_IMPORTED_MODULE_4__["TweenLite"].to(this.indicatorRef.current, duration, {
+      left: move,
+      ease: gsap__WEBPACK_IMPORTED_MODULE_4__["Power2"].easeOut
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_4__["TweenLite"].to(this.indicatorRef.current, duration / 3, Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      delay: 2 * duration / 3,
+      ease: gsap__WEBPACK_IMPORTED_MODULE_4__["SlowMo"].easeInOut
+    }, borders));
   }
 
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "navigation-main",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 37
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 38
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
       onClick: () => this.moveIndicator(false),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 38
       },
       __self: this
-    }, "Personal")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "Personal")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "indicator-space",
       ref: this.indicatorSpaceRef,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 39
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "indicator",
       ref: this.indicatorRef,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 40
       },
       __self: this
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/projects",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 42
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
       onClick: () => this.moveIndicator(true),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 42
       },
       __self: this
     }, "Projects")));

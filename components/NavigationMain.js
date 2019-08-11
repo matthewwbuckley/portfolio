@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 import { CSSTransition } from 'react-transition-group'
-import { TweenLite, Power2 } from 'gsap'
+import { TweenLite, Power2, SlowMo } from 'gsap'
 
 class NavigationMain extends React.Component {
   constructor(props){
@@ -21,7 +21,15 @@ class NavigationMain extends React.Component {
   moveIndicator(bool, duration=1.2){
     const dimensions = this.indicatorSpaceRef.current.getBoundingClientRect()
     const move = bool ? `${dimensions.width - 20}` : '10px'
+    let borders = {}
+    borders.borderTopLeftRadius = bool ? '100%' : '0%'
+    borders.borderTopRightRadius = bool ? '100%' : '100%'
+    borders.borderBottomLeftRadius = bool ? '100%' : '100%'
+    borders.borderBottomRightRadius = bool ? '0%' : '100%'
+
+    TweenLite.set(this.indicatorRef.current, {borderRadius: '100%'})
     TweenLite.to(this.indicatorRef.current, duration, {left: move, ease: Power2.easeOut })
+    TweenLite.to(this.indicatorRef.current, duration/3, {delay: 2*duration/3,  ease: SlowMo.easeInOut, ...borders })
   }
 
   render(){
