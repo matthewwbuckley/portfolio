@@ -19,7 +19,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && npm run export"
   },
   "eslintConfig": {
     "extends": "react-app"
