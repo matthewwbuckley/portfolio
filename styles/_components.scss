@@ -2,7 +2,7 @@
 .info {
   position: sticky;
   top: $spacing-large;
-  border-left: 1px solid $color-highlight;
+  border-left: 2px solid $color-highlight;
   padding: 0 $spacing-default;
   @media (max-width: $breakpoint-first){
     position: static;

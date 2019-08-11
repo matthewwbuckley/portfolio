@@ -1,6 +1,8 @@
 h1 {
   font-family: $font-title;
   margin: $spacing-small 0px;
+  color: $color-dark;
+  text-shadow: 2px 2px $color-mid ;
 }
 
 h2 {

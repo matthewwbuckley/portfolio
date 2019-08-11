@@ -45,7 +45,7 @@
 .info {
   position: sticky;
   top: 24px;
-  border-left: 1px solid #D33F49;
+  border-left: 2px solid #D33F49;
   padding: 0 16px; }
   @media (max-width: 1200px) {
     .info {
@@ -136,7 +136,9 @@
 
 h1 {
   font-family: Varela Round;
-  margin: 8px 0px; }
+  margin: 8px 0px;
+  color: #262730;
+  text-shadow: 2px 2px #D7C0D0; }
 
 h2 {
   font-family: Varela Round;

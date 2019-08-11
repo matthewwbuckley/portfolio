@@ -15,6 +15,7 @@
     background-color: $color-light;
     padding: $spacing-default;
     border-top: 5px solid $color-highlight;  
+
     @media (max-width: $breakpoint-first){
       text-align: center;
     }  
