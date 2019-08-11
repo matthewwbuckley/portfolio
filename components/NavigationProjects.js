@@ -12,13 +12,13 @@ function NavigationProjects (props){
       <Link href='/projects/boost-ball'>    
         <h3 className={`${array[0]} interactive`} >BoostBall</h3>
       </Link>
-      <Link href='/projects/'>              
+      <Link href='/projects'>              
         <h3 className={`${array[1]} interactive`} >interactive</h3>
       </Link>
       <Link href='/projects/short-stories'> 
         <h3 className={`${array[2]} interactive`} >Short Stories</h3>
       </Link>
-      <Link href='/projects/'>              
+      <Link href='/projects'>              
         <h3 className={`${array[3]} interactive`} >Portfolio</h3>
       </Link>
       <Link href='/projects/misc-projects'> 
