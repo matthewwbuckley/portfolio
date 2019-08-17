@@ -1,10 +1,11 @@
 import React from 'react'
+import Link from 'next/link'
 
 function Header() {
   return (
-    <div className="header">
-      <h1>Matthew Buckley</h1>
-    </div>
+    <header className="header">
+      <Link href='/'><h1 className='link-title' >Matthew W Buckley</h1></Link>
+    </header>
   )
   
 }

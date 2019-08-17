@@ -4,18 +4,42 @@ import Link from 'next/link'
 import { CSSTransition } from 'react-transition-group'
 import { TweenLite, Power2, SlowMo } from 'gsap'
 
+import appContextWrapper from '../context/appContextWrapper'
+
 class NavigationMain extends React.Component {
   constructor(props){
     super(props)
+
+    this.state = {
+      position: 'left'
+    }
 
     this.indicatorSpaceRef = React.createRef()
     this.indicatorRef = React.createRef()
   }
 
   componentDidMount(){
-    const route = this.props.app.props.router.route
+    const { app } = this.props
+    const route = app.props.router.route
     const inProjects = route.includes('projects')
+    const position = inProjects ? 'right' : 'left'
+
+    this.setState({position})
+
     this.moveIndicator(inProjects, 1.8)
+  }
+
+  componentDidUpdate(){
+    const { app } = this.props
+    const route = app.props.router.route
+    const inProjects = route.includes('projects')
+    const position = inProjects ? 'right' : 'left'
+
+    if(position !== this.state.position) {
+      this.setState({position})
+      this.moveIndicator(inProjects, 1.8)
+    }
+    
   }
 
   moveIndicator(bool, duration=1.2){
@@ -34,13 +58,13 @@ class NavigationMain extends React.Component {
 
   render(){
     return(
-      <div className='navigation-main'>
+      <nav className='navigation-main'>
         <Link href='/'><h2 onClick={()=>this.moveIndicator(false)} >Personal</h2></Link>
           <div className='indicator-space' ref={this.indicatorSpaceRef}>
             <div className='indicator' ref={this.indicatorRef}/>
           </div>
         <Link href='/projects'><h2 onClick={()=>this.moveIndicator(true)}  >Projects</h2></Link>
-      </div>
+      </nav>
     )
   }
 }

@@ -52,13 +52,9 @@ class MyApp extends App {
 
   }
 
-  // componentDidMount(){
-  //   this.setState({hasMounted: true})
-  // }
-
-  // setReference(name, ref){
-  //   this.setState({[name]: ref})
-  // }
+  setReference(ref, name) {
+    this.setState({[name]: ref})
+  }
 
 
   render () {

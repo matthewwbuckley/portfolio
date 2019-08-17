@@ -1,5 +1,158 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\_app.js"],{
 
+/***/ "./components/Contact.js":
+/*!*******************************!*\
+  !*** ./components/Contact.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+var _jsxFileName = "D:\\Websites\\portfolio\\components\\Contact.js";
+
+
+
+class Contact extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isRevealed: false
+    };
+    this.ref = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    this.handleReveal = this.handleReveal.bind(this);
+  }
+
+  handleReveal() {
+    const {
+      isRevealed
+    } = this.state;
+    let timeline = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"]();
+    const height = !isRevealed ? "".concat(this.ref.current.scrollHeight, "px") : '0px';
+    this.setState(oldState => {
+      return {
+        isRevealed: !oldState.isRevealed
+      };
+    }); //await TweenLite.to(this.ref.current, 1, {height, ease: Power2.easeOut})
+
+    if (isRevealed) {
+      timeline.to(this.ref.current, 1, {
+        height,
+        ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power2"].easeOut
+      });
+    } else {
+      timeline.to(this.ref.current, 1, {
+        height,
+        ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power2"].easeOut
+      }).set(this.ref.current, {
+        height: 'auto'
+      });
+    }
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "contact",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+      onClick: this.handleReveal,
+      style: {
+        cursor: 'pointer',
+        color: '#F71735'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }, "Click here to get in touch"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "revealer",
+      ref: this.ref,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      className: "contact",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "contact-spacer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      className: "contact-input",
+      placeholder: "name",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "contact-spacer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      className: "contact-input",
+      placeholder: "email",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "contact-spacer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+      placeholder: "message",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "contact-spacer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: this
+    }, "Submit")))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Contact);
+
+/***/ }),
+
 /***/ "./components/Info.js":
 /*!****************************!*\
   !*** ./components/Info.js ***!
@@ -11,7 +164,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Contact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Contact */ "./components/Contact.js");
 var _jsxFileName = "D:\\Websites\\portfolio\\components\\Info.js";
+
 
 
 class Info extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
@@ -20,38 +175,38 @@ class Info extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       className: "info",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 6
+        lineNumber: 7
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 7
+        lineNumber: 8
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      class: "no-display-breakpoint-first",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 7
-      },
-      __self: this
-    }, "Matthew Buckley")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+      className: "no-display-breakpoint-first",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 8
       },
       __self: this
-    }, "Self Taught Full Stack Web Developer with a Scientific Background"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, "Matthew W Buckley")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 9
       },
       __self: this
-    }, "Learning the MERN stack; Mongo, Express, React and Node, along with associated technologies."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, "Self Taught Full Stack Web Developer with a Scientific Background"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 10
+      },
+      __self: this
+    }, "Learning web development with a focus on the MERN stack; Mongo, Express, React and Node, along with associated technologies."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
       },
       __self: this
     }, "I am looking for opportunities to learn and solve problems."));
@@ -79,8 +234,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/esm/index.js");
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var _context_appContextWrapper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../context/appContextWrapper */ "./context/appContextWrapper.js");
 
 var _jsxFileName = "D:\\Websites\\portfolio\\components\\NavigationMain.js";
+
 
 
 
@@ -89,14 +246,40 @@ var _jsxFileName = "D:\\Websites\\portfolio\\components\\NavigationMain.js";
 class NavigationMain extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      position: 'left'
+    };
     this.indicatorSpaceRef = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
     this.indicatorRef = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
   }
 
   componentDidMount() {
-    const route = this.props.app.props.router.route;
+    const {
+      app
+    } = this.props;
+    const route = app.props.router.route;
     const inProjects = route.includes('projects');
+    const position = inProjects ? 'right' : 'left';
+    this.setState({
+      position
+    });
     this.moveIndicator(inProjects, 1.8);
+  }
+
+  componentDidUpdate() {
+    const {
+      app
+    } = this.props;
+    const route = app.props.router.route;
+    const inProjects = route.includes('projects');
+    const position = inProjects ? 'right' : 'left';
+
+    if (position !== this.state.position) {
+      this.setState({
+        position
+      });
+      this.moveIndicator(inProjects, 1.8);
+    }
   }
 
   moveIndicator(bool, duration = 1.2) {
@@ -121,25 +304,25 @@ class NavigationMain extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compon
   }
 
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("nav", {
       className: "navigation-main",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 61
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 62
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
       onClick: () => this.moveIndicator(false),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 62
       },
       __self: this
     }, "Personal")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -147,7 +330,7 @@ class NavigationMain extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compon
       ref: this.indicatorSpaceRef,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 63
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -155,21 +338,21 @@ class NavigationMain extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compon
       ref: this.indicatorRef,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 64
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/projects",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 66
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
       onClick: () => this.moveIndicator(true),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 66
       },
       __self: this
     }, "Projects")));
@@ -198,6 +381,51 @@ const appContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(nu
 
 /***/ }),
 
+/***/ "./context/appContextWrapper.js":
+/*!**************************************!*\
+  !*** ./context/appContextWrapper.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _appContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./appContext */ "./context/appContext.js");
+
+var _jsxFileName = "D:\\Websites\\portfolio\\context\\appContextWrapper.js";
+
+
+
+function appContextWrapper(Component) {
+  return class extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+    render() {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_appContext__WEBPACK_IMPORTED_MODULE_2__["default"].Consumer, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 8
+        },
+        __self: this
+      }, app => react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        app: app
+      }, this.props, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: this
+      })));
+    }
+
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (appContextWrapper);
+
+/***/ }),
+
 /***/ "./layout/Header.js":
 /*!**************************!*\
   !*** ./layout/Header.js ***!
@@ -209,24 +437,35 @@ const appContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(nu
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "D:\\Websites\\portfolio\\layout\\Header.js";
 
 
+
 function Header() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     className: "header",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: this
-  }, "Matthew Buckley"));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "link-title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, "Matthew W Buckley")));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -401,7 +640,7 @@ const exit = component => {
     top: 0
   }));
   gsap__WEBPACK_IMPORTED_MODULE_4__["TweenLite"].to(component, transitionDuration / 2, {
-    color: '#77BA99'
+    color: '#415A77'
   });
   gsap__WEBPACK_IMPORTED_MODULE_4__["TweenLite"].to(component, transitionDuration, transitionStyles.start);
 };
@@ -527,7 +766,7 @@ class MainRight extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
         lineNumber: 30
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("aside", {
       className: "main-right",
       ref: this.ref,
       __source: {
@@ -20233,13 +20472,13 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
       mainLeft: null,
       mainRight: null
     };
-  } // componentDidMount(){
-  //   this.setState({hasMounted: true})
-  // }
-  // setReference(name, ref){
-  //   this.setState({[name]: ref})
-  // }
+  }
 
+  setReference(ref, name) {
+    this.setState({
+      [name]: ref
+    });
+  }
 
   render() {
     const {
@@ -20249,26 +20488,26 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
     const Page = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_1__["Container"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 64
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_4__["TransitionGroup"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 65
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 66
       },
       __self: this
     }))));
     const info = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_Info__WEBPACK_IMPORTED_MODULE_8__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75
+        lineNumber: 71
       },
       __self: this
     });
@@ -20276,19 +20515,19 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
       value: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
+        lineNumber: 74
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
+        lineNumber: 75
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("title", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 80
+        lineNumber: 76
       },
       __self: this
     }, "Matthew Buckley"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("link", {
@@ -20296,7 +20535,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
       rel: "stylesheet",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 77
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("link", {
@@ -20304,13 +20543,13 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
       href: "https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82
+        lineNumber: 78
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_1__["Container"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 80
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_layout_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -20323,7 +20562,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85
+        lineNumber: 81
       },
       __self: this
     })));

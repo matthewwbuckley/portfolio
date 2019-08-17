@@ -6,40 +6,43 @@ import NavigationProjects from '../../components/NavigationProjects'
 class Projects extends React.Component {
   render() {
     return (
-      <div className='container'>
+      <div className='start' className='container'>
         <NavigationProjects index={4} />
         <h4>
           Painter
         </h4>
         <p>
-          After Boost Ball I wanted to create a narrative puzzle game based around playing out the same day. I switched to Unity for its C# over the modified C++ in Unreal. As part of the project I created a procedural paint effect based around <a target="_blank" href='https://tylerxhobbs.com/essays/2017/a-generative-approach-to-simulating-watercolor-paints'>an article of Tyler Hobbs</a>.  
+          This is part of a planned narrative puzzle game that was never finished, made using Unity. As part of the project a procedural painting effect was developed based on <a target="_blank" href='https://tylerxhobbs.com/essays/2017/a-generative-approach-to-simulating-watercolor-paints'>the work of Tyler Hobbs</a>.  
         </p>
         <p>
-          The technique would take an image and draw splotches of colour based on transparency. The splotches where overlapping semi-transparent 2D polygons, modified by a noise function, and slightly moved with translational noise. These would continually be generated and removed, hoping to make a living painting effect. I didn't progress too far before shifting my focus to web development, and left it as a pure implementation of the technique, meaning it is very computationally expensive and not useful beyond the demonstration.         
+        The technique would take an image and draw splotches of colour. The splotches where created using overlapping semi-transparent 2D polygons, slightly modified and translated by noise functions. These would be repeatedly generated and removed with the aim to create the effect of a painting that was continually being drawn. This prototype, too computationally expensive to be used for anything other than a demonstration, was developed before the project was abandoned.         
         </p>
         <iframe className='video-main' src="https://www.youtube.com/embed/4jgPFjjSBM0" frameborder="0" allowfullscreen />
         <div className='spacer' />
         <h4>
-          Outdated Versions of Interactive Story Site
+          Previous Versions of iCYOA
         </h4>
         <p>
-          The idea is a site where users can write and play interactive stories, driven by variables. I have made the site multiple times and here I will briefly discuss old versions of the site. The first was built in Wordpress using the ACF plugin. Everything worked, but it could not build large stories because Wordpress submits individual database calls for each ACF field, and there could be hundreds. I learnt an important lesson: test up to and beyond intended usage.  
+        The goals was a site where users could write and play interactive stories, driven by variables. Initially the site was built using Wordpress using the ACF plugin. Sadly, it was discovered that the fields created by ACF were submitted to the database individually and the site had to be abandoned.  
         </p>
         <p>
-          When learning React I rebuilt the site. I had ~100 sign ups and ~150 stories started a day after launching, but only a few stories were ever published. I believe the problem was that creating stories was not enjoyable, and really came down to filling out textboxes. A week after it was built I felt that the only way for the site to be successful would be an entire rebuild with a rewarding and intuitive method of creation. 
+        The site was rebuilt using React, which used a JSON file to store the story data. This JSON could be built by users using a dynamic form, allowing the creation of pages, choices, options and upgrades which depended on author defined and user modified variables. Once created the story could be published and played on the site. The site had ~100 sign ups who started ~150 stories, but very few were ever published.  
         </p>
         <p>
-          I eventually rebuild the site again, but I think I was motivated more by annoyance from past failures and the guilt of letting people down.  The new site is better but not perfect, and is talked about here.
+        The site would later be rebuilt again, in an effort to offer a rewarding and intuitive method of story creation.
         </p>
         <div className='spacer' />
         <h4>
-          Old Gatsby Portfolio
+          Old and New Portfolio
         </h4>
-        <a className='link-major start' target="_blank" href='https://github.com/matthewwbuckley/WriterWebsite'>
-          See on Github
+        <a className='start' target="_blank" href='https://github.com/matthewwbuckley/personal-site'>
+          See Old Portfolio on Github
+        </a>
+        <a className='start' target="_blank" href='https://github.com/matthewwbuckley/portfolio'>
+          See New Portfolio on Github
         </a>
         <p>
-          A simple static website built using Gatsby and hosted on netlify, both of which have left me impressed. I took the opportunity to try out sass. It is not documented and only serves to show that I have used Gatsby.
+        This site replaces the old portfolio site, moving from Gatsby to Next while remaining on Netlify. Trying the react-transition-group library was an aim of this site, which can be seen on the fade transitions between pages, and the fade in of the site as a whole. The animations were handles by GSAP, for both the fade transitions and animating the circle indicators. During development of this site the power of Sass became much more evident, as building the site around declared variables allowed quick iterations between potential styles. 
         </p>
       </div>
     )

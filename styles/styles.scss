@@ -13,17 +13,23 @@ body {
   color: $color-dark;
   overflow-y: scroll;
   min-height: calc(100vh + 5px);
-  border-bottom: 5px solid $color-semidark
+  border-bottom: 5px solid $color-semidark;
 }
 
 ::selection {
-  background: $color-semidark; /* WebKit/Blink Browsers */
+  background: $color-mid; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: $color-semidark; /* Gecko Browsers */
+  background: $color-mid; /* Gecko Browsers */
 }
 
 iframe {
   margin: $spacing-large 0;
+}
+
+img {
+  margin: $spacing-large 0;
+  height: auto;
+  width: 100%;
 }
 

@@ -35,10 +35,11 @@ class Home extends React.Component {
           <Icon {...technologies.git} />
         </div>
         <p>
-          My PhD now probably comes under "transferable skills", so let me discuss it briefly. I investigated small molecule desorption from Ionic Liquids to characterise their interactions  while under Ultra-High Vacuum conditions. The work helped develop a deliberate and methodical approach to problems, and working as a team helped develop my communications skills. Towards the end of my PhD I found that I really enjoyed develping tools to analyse my data, and decided to pursue programming.
+          {/* My PhD now probably comes under "transferable skills", so let me discuss it briefly. I investigated small molecule desorption from Ionic Liquids to characterise their interactions while under Ultra-High Vacuum conditions. The work helped develop a deliberate and methodical approach to problems, and working as a team helped develop my communications skills. Towards the end of my PhD I found that I really enjoyed develping tools to analyse my data, and decided to pursue programming. */}
+          During my PhD I investigated small molecule desorption from Ionic Liquids to characterise their interactions while under Ultra-High Vacuum conditions. The work helped develop a deliberate and methodical approach to problems, and working as a team helped develop my communications skills. Towards the end of my PhD I found that I really enjoyed develping tools to analyse my data, and decided to pursue programming.
         </p>
         <p>
-          I am quiet, patient, and happily boring. I have an interest in games, science, politics, and technology. Before getting into web development I had a go at game development and developed a game for android. 
+          {/* I am quiet, patient, and happily boring. I have an interest in games, science, politics, and technology. Before getting into web development I had a go at game development and developed a game for android.  */}
         </p>
       </div>
     )

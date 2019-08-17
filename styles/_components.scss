@@ -7,7 +7,7 @@
   @media (max-width: $breakpoint-first){
     position: static;
     border-left: none;
-    border-bottom: 1px solid $color-highlight;
+    border-bottom: 2px solid $color-highlight;
     text-align: center;
   }
 }
@@ -49,6 +49,7 @@
     height: 20px;
     width: auto;
     text-align: center;
+    margin: 0px;
   }
 
   .icon-text {
@@ -98,9 +99,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: $spacing-large;
 
   .nav-sub-selected {
-    color: $color-highlight
+    color: $color-highlight;
+    font-weight: 900;
   }
 }
 
@@ -120,5 +123,59 @@
     width: 8px;
     background-color: $color-semidark;
     border-radius: 100%;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+  .contact-spacer {
+    padding: $spacing-small 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .contact-group {
+
+  }
+
+  textarea {
+    border: 1px solid $color-semidark;
+    padding: $spacing-smaller;
+    border-radius: $spacing-smallest;
+    font-size: 14px;
+    font-family: $font-subtitle;
+    resize: vertical;
+  }
+
+  button {
+    font-size: 16px;
+    padding: $spacing-smaller;
+    border-radius: $spacing-smaller;
+    border: none;
+    background-color: $color-mid;
+    color: $color-light;
+    font-family: $font-subtitle;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  .contact-input {
+    border: 1px solid $color-semidark;
+    padding: $spacing-smaller;
+    border-radius: $spacing-smallest;
+    font-size: 14px;
+    font-family: $font-subtitle;
+    transition-duration: 0.5s;
+
+    &:focus {
+      border: 1px solid $color-highlight;
+      outline: none;
+    }
   }
 }

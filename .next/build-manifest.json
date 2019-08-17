@@ -25,6 +25,10 @@
     "/projects": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+    ],
+    "/projects/icyoa": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }

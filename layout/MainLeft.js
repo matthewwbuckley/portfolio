@@ -37,7 +37,7 @@ const enter = (component) => {
 
 const exit = (component) => {
   TweenLite.set(component, {...transitionStyles.end, delay: 0, position: 'absolute', top: 0})
-  TweenLite.to(component, transitionDuration/2, {color: '#77BA99'})
+  TweenLite.to(component, transitionDuration/2, {color: '#415A77'})
   TweenLite.to(component, transitionDuration, transitionStyles.start)
 }
 

@@ -16,6 +16,11 @@
   height: 337px
 }
 
+.revealer {
+  height: 0px;
+  overflow: hidden;
+}
+
 .spacer {
   padding: $spacing-large;
 }

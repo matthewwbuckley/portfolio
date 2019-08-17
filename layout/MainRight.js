@@ -30,12 +30,12 @@ class MainRight extends React.Component {
       <Transition in appear={!this.props.app.state.hasMounted} timeout={0}
         onEnter={(component)=>{enter(component)}}
       >
-        <div 
+        <aside 
           className="main-right"
           ref={this.ref}
         >
           {this.props.component}
-        </div>
+        </aside>
     </Transition>
     )
   }
