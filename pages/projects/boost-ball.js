@@ -17,14 +17,11 @@ class Projects extends React.Component {
         </p>
         <iframe className='video-main' src="https://www.youtube.com/embed/L580kzq8R2c" frameborder="0" allowfullscreen />
         <p>
-          The first issue was a technical limitation. Crisp dynamic shadows are computationally expensive, causing the framerate to drop This prompted a shift to fully diffuse lighting, removing shadows entirely, and resulting in a flat aesthetic.  Other problems were related to gameplay. Collisions were unsatisfying so a force was added along the contact vector. There was no loss state, so a ball was added to chase the player and end the game on contact. A penalty was added for hitting balls out of order to increase risk. After adding a UI the demo was set to release, with further development planned if people enjoyed the game. 
-        </p>
-        <p>
-          Other problems were related to gameplay. Collisions were unsatisfying so a force was added along the contact vector. There was no loss state, which left the game feeling boring, so a bad ball was added to chase the player and end the game on contact. A penalty was added for hitting balls out of order to increase risk. With these changes I added a UI and intended to release it as a demo.
+          The first issue was a technical limitation. Crisp dynamic shadows are computationally expensive, causing the framerate to drop. This prompted a shift to fully diffuse lighting, removing shadows entirely, and resulting in a flat aesthetic.  Other problems were related to gameplay. Collisions were unsatisfying so a force was added along the contact vector. There was no loss state, so a ball was added to chase the player and end the game on contact. A penalty was added for hitting balls out of order to increase risk. After adding a UI the demo was set to release, with further development planned if people enjoyed the game. 
         </p>
         <iframe className='video-main' src="https://www.youtube.com/embed/vpQIs2beImI" frameborder="0" allowfullscreen />
         <p>
-        The game was boring, difficult, and the optimal strategy was to ignore the potting order and get lucky with the break. It would be pointless to release before reworking.
+        The game was ugly, boring, difficult, and the optimal strategy was to ignore the potting order and get lucky with the break. It would be pointless to release before reworking.
         </p>
         <ListItem>
           <p>
