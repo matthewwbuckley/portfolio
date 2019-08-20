@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{"10sb":function(n,o,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/ddd/contact",function(){var n=t("mjfB");return{page:n.default||n}}])},mjfB:function(n,o,t){"use strict";t.r(o),o.default=null}},[["10sb",1]]]);

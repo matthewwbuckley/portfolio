@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{"10sb":function(n,t,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/ddd/contact",function(){var n=e("mjfB");return{page:n.default||n}}])},mjfB:function(n,t,e){"use strict";e.r(t);var u=e("q1tI"),o=e.n(u);t.default=function(){return o.a.createElement("div",null)}}},[["10sb",1,0]]]);
