@@ -19,9 +19,9 @@ class Home extends React.Component {
           I am growing in confidence with the MERN Stack. I have more experience with front-end development but have developed full stack applications.
         </p>
         <div className='flex-row'>
-          <Icon {...technologies.react} />
-          <Icon {...technologies.express} />
           <Icon {...technologies.mongo} />
+          <Icon {...technologies.express} />
+          <Icon {...technologies.react} />
           <Icon {...technologies.node} />
         </div>
         <p>
