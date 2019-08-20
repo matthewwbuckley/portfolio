@@ -13,6 +13,7 @@ class Info extends React.Component {
         <p>
           I am looking for opportunities to learn and solve problems.
         </p>
+        <Contact/>
       </div>
     )
   }

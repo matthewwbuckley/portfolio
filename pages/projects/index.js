@@ -11,13 +11,13 @@ class Projects extends React.Component {
         <ProjectLink 
           link="/projects/icyoa"
           name="iCYOA"
-          text="A site for creating interactive stories/games."
+          text="A site for creating interactive stories/games. Click here to find out more."
           technologies={[ technologies.react, technologies.mongo, technologies.express, technologies.node, technologies.strapi ]}
         />
         <ProjectLink 
           link="/projects/short-stories"
           name="Short Story Website"
-          text="An unpublished resticted CRUD app for writing short stories which could be rated and commented on."
+          text="Click here to read about an unpublished resticted CRUD app for writing short stories which could be rated and commented on."
           technologies={[ technologies.react, technologies.mongo, technologies.express, technologies.node ]}
         />
         <ProjectLink 

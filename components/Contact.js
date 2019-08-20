@@ -1,6 +1,8 @@
 import React from 'react'
 import { TimelineMax, TweenLite, Power2 } from 'gsap'
 
+import sendContact from '../api/contact'
+
 class Contact extends React.Component {
   constructor(props){
     super(props)
@@ -38,7 +40,9 @@ class Contact extends React.Component {
           className='revealer'
           ref={this.ref}
         >
-          <form className='contact'>
+          <form className='contact' onSubmit={e=>{
+            sendContact('fake@email.com', 'default text')
+          }}>
             <div className='contact-spacer'>
               <input 
                 className='contact-input'
