@@ -8,6 +8,7 @@
     "css-loader": "^1.0.1",
     "dotenv": "^8.1.0",
     "gsap": "^2.1.3",
+    "netlify-lambda": "^1.6.2",
     "next": "^9.0.3",
     "next-page-transitions": "^1.0.0-beta.2",
     "node-sass": "^4.12.0",
@@ -20,6 +21,7 @@
     "react-transition-group": "^4.2.2"
   },
   "scripts": {
+    "test": "next build && netlify-lambda build src/functions && next export",
     "dev": "next",
     "build": "next build",
     "start": "next start",
