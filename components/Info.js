@@ -13,6 +13,14 @@ class Info extends React.Component {
         <p>
           I am looking for opportunities to learn and solve problems.
         </p>
+        <div className="flex-row">
+          <a href="https://github.com/matthewwbuckley" class="icon" style={{color: '#011627'}} >
+            <i class="devicon-git-plain" />
+          </a>
+          <a href="www.linkedin.com/in/matthew-w-buckley" class="icon" >
+            <img src='static/linkedin.svg' alt="linkedin" />
+          </a>
+        </div>
       </div>
     )
   }
