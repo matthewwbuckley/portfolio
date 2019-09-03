@@ -13,11 +13,14 @@ class Info extends React.Component {
         <p>
           I am looking for opportunities to learn and solve problems.
         </p>
+        <p >
+          Pleas feel free to <a href='mailto:matthewwbuckley@gmail.com'>email me</a>.
+        </p>
         <div className="flex-row">
-          <a href="https://github.com/matthewwbuckley" class="icon" style={{color: '#011627'}} >
-            <i class="devicon-git-plain" />
+          <a href="https://github.com/matthewwbuckley" class="icon" style={{color: '#011627'}} target="_blank" rel="noopener noreferrer" >
+            <i class="devicon-github-plain"/>
           </a>
-          <a href="www.linkedin.com/in/matthew-w-buckley" class="icon" >
+          <a href="https://linkedin.com/in/matthew-w-buckley" class="icon" target="_blank" rel="noopener noreferrer" >
             <img src='static/linkedin.svg' alt="linkedin" />
           </a>
         </div>
