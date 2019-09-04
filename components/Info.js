@@ -13,8 +13,8 @@ class Info extends React.Component {
         <p>
           I am looking for opportunities to learn and solve problems.
         </p>
-        <p >
-          Pleas feel free to <a href='mailto:matthewwbuckley@gmail.com'>email me</a>.
+        <p>
+          Please feel free to <a href='mailto:matthewwbuckley@gmail.com'>email me</a>.
         </p>
         <div className="flex-row">
           <a href="https://github.com/matthewwbuckley" class="icon" style={{color: '#011627'}} target="_blank" rel="noopener noreferrer" >

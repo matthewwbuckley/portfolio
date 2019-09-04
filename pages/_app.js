@@ -74,6 +74,7 @@ class MyApp extends App {
       <appContext.Provider value={this}>
         <Head>
           <title>Matthew Buckley</title>
+          <link rel="shortcut icon" type="image/x-icon" href="/static/favicon2.ico" />
           <link href="https://fonts.googleapis.com/css?family=Dosis|Nanum+Gothic|Rajdhani|Varela+Round&display=swap" rel="stylesheet" />
           <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" />
         </Head>
