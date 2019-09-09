@@ -2,35 +2,35 @@ import React from 'react'
 
 const technologies = {
   html : {
-    icon: <i class="devicon-html5-plain" />,
+    icon: <i className="devicon-html5-plain" />,
     text: "html5"
   },
   css : {
-    icon: <i class="devicon-css3-plain" />,
+    icon: <i className="devicon-css3-plain" />,
     text: "css"
   },
   js : {
-    icon: <i class="devicon-javascript-plain" />,
+    icon: <i className="devicon-javascript-plain" />,
     text: "js/es6"
   },
   react : {
-    icon: <i class="devicon-react-original"/>,
+    icon: <i className="devicon-react-original"/>,
     text: "react"
   },
   express : {
-    icon: <i class="devicon-express-original" />,
+    icon: <i className="devicon-express-original" />,
     text: "express"
   },
   mongo : {
-    icon: <i class="devicon-mongodb-plain" />,
+    icon: <i className="devicon-mongodb-plain" />,
     text: "mongo"
   },
   node : {
-    icon: <i class="devicon-nodejs-plain" />,
+    icon: <i className="devicon-nodejs-plain" />,
     text: "nodejs"
   },
   sass : {
-    icon: <i class="devicon-sass-original" />,
+    icon: <i className="devicon-sass-original" />,
     text: "sass"
   },
   next : {
@@ -54,7 +54,7 @@ const technologies = {
     text: "unity"
   },
   git : {
-    icon: <i class="devicon-git-plain" />,
+    icon: <i className="devicon-git-plain" />,
     text: "git"
   },
 }

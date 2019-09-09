@@ -8,7 +8,7 @@ class Projects extends React.Component {
     return (
       <div className='container'>
         <NavigationProjects index={2} />
-        <a className='end' target="_blank" href='https://github.com/matthewwbuckley/WriterWebsite'>
+        <a className='end' target="_blank" href='https://github.com/matthewwbuckley/WriterWebsite-Front'>
           See on Github
         </a>
         <p>
@@ -20,7 +20,7 @@ class Projects extends React.Component {
         <p>
         The site was initially larger in scope with audio readings, series, and playlists, but these were cut as confidence in the site decreased. The aim of the project was to get more comfortable in React and write a structured project, and was a great learning exercise. 
         </p>
-        <a className='start' target="_blank" href='https://github.com/matthewwbuckley/WriterWebsite'>
+        <a className='start' target="_blank" href='https://github.com/matthewwbuckley/WriterWebsite-Front'>
         See on Github
         </a>
       </div>

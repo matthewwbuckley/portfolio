@@ -11,35 +11,6 @@ import Info from '../components/Info'
 
 import '../styles/styles.scss'
 
-
-const transitionDuration = 0.5
-
-const transitionStyles = {
-  start:  { 
-    opacity: 0,
-    color: 'red',
-    position: 'absolute',
-    ease:  SlowMo.easeInOut,
-  },
-  end:  { 
-    opacity: 1,
-    color: null,
-    delay: transitionDuration,
-    ease:  SlowMo.easeInOut,
-  },
-};
-
-const enter = (component) => {
-  TweenLite.set(component, transitionStyles.start)
-  TweenLite.to(component, transitionDuration, transitionStyles.end)
-}
-
-const exit = (component) => {
-  TweenLite.set(component, transitionStyles.end)
-  TweenLite.to(component, transitionDuration, transitionStyles.start)
-}
-
-
 class MyApp extends App {
   constructor(props){
     super(props)

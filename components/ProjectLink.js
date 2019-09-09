@@ -44,7 +44,7 @@ class ProjectLink extends React.Component {
             className='flex-row'
           >
             {technologies.map(tech=> (
-              <Icon icon={tech.icon} text={tech.text} show={true} />
+              <Icon key={tech.text} icon={tech.icon} text={tech.text} show={true} />
             ))}
           </div>
         </div>
