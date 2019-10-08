@@ -49,4 +49,8 @@ a {
 
 .link-title {
   cursor: pointer; 
+  padding-left: 12px;
+  @media (max-width: $breakpoint-first){
+    padding-left: none;
+  }  
 }

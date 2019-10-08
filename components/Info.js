@@ -20,10 +20,10 @@ class Info extends React.Component {
           </form> and <a href='mailto:matthewwbuckley@gmail.com'>email me</a>.
         </p>
         <div className="flex-row">
-          <a href="https://github.com/matthewwbuckley" class="icon" style={{color: '#011627'}} target="_blank" rel="noopener noreferrer" >
+          <a href="https://github.com/matthewwbuckley" className="icon" style={{color: '#011627'}} target="_blank" rel="noopener noreferrer" >
             <i className="devicon-github-plain"/>
           </a>
-          <a href="https://linkedin.com/in/matthew-w-buckley" class="icon" target="_blank" rel="noopener noreferrer" >
+          <a href="https://linkedin.com/in/matthew-w-buckley" className="icon" target="_blank" rel="noopener noreferrer" >
             <img src='static/linkedin.svg' alt="linkedin" />
           </a>
         </div>
