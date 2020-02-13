@@ -9,6 +9,12 @@ class Projects extends React.Component {
       <div className='start' className='container'>
         <NavigationProjects index={4} />
         <h4>
+          Astronomical Picture of the Day (APOD) App
+        </h4>
+        <p>
+        I wanted to have a project that interacted with an external API and was simple enough for me to focus on creating a project from scratch to get experience with webpack. I also used to gain experience with redux and the firebase hosting platform. The project uses the <a target="_blank" rel="noopener noreferrer" href="https://api.nasa.gov/">APOD (Astronomy Picture of the Day) API</a>. I also took this opportunity to improve my git commit message style.  
+        </p>
+        <h4>
           Painter
         </h4>
         <p>
@@ -17,7 +23,7 @@ class Projects extends React.Component {
         <p>
         The technique would take an image and draw splotches of colour. The splotches are created using overlapping semi-transparent 2D polygons, slightly modified and translated by noise functions. These would be repeatedly generated and removed with the aim to create the effect of a painting that was continually being drawn. This prototype is too computationally expensive to be used for anything other than a demonstration, and development stopped before it could be made viable.         
         </p>
-        <iframe className='video-main' src="https://www.youtube.com/embed/4jgPFjjSBM0" frameborder="0" allowfullscreen />
+        <iframe title="painter-video" className='video-main' src="https://www.youtube.com/embed/4jgPFjjSBM0" frameborder="0" allowfullscreen />
         <div className='spacer' />
         <h4>
           Previous Version of iCYOA
@@ -32,10 +38,10 @@ class Projects extends React.Component {
         <h4>
           Old and New Portfolio
         </h4>
-        <a className='start' target="_blank" href='https://github.com/matthewwbuckley/personal-site'>
+        <a className='start' target="_blank" rel="noopener noreferrer" href='https://github.com/matthewwbuckley/personal-site'>
           See Old Portfolio on Github
         </a>
-        <a className='start' target="_blank" href='https://github.com/matthewwbuckley/portfolio'>
+        <a className='start' target="_blank" rel="noopener noreferrer" href='https://github.com/matthewwbuckley/portfolio'>
           See New Portfolio on Github
         </a>
         <p>
